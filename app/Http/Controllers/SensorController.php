@@ -3,7 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Sensor;
+
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+
+
+
 
 class SensorController extends Controller
 {
@@ -98,4 +105,15 @@ class SensorController extends Controller
         $sensor->delete();
         return redirect()->route('sensors.index');
     }
+
+
+    public function chart()
+    {
+
+
+        return view('sensors.Grafica');
+
+    }
+
+
 }

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -22,7 +23,177 @@
 
     <link href="{{ asset('white') }}/css/white-dashboard.css?v=1.0.0" rel="stylesheet" />
     <link href="{{ asset('white') }}/css/theme.css" rel="stylesheet" />
+
+
 </head>
+<style>
+    html {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        font-family: 'Handlee', cursive;
+        font-size: 13pt;
+        background-color: #e8e6ef;
+        padding: 10px;
+        margin: 0;
+    }
+    h1 {
+        font-size: 15pt;
+        color: #20bcd5;
+        text-align: center;
+        padding: 18px 0 18px 0;
+        margin: 0 0 10px 0;
+    }
+    h1 span {
+        border: 4px dashed #20bcd5;
+        padding: 10px;
+    }
+    p {
+        padding: 0;
+        margin: 0;
+    }
+    .img-circle {
+        border: 3px solid white;
+        border-radius: 50%;
+    }
+    .section {
+        background-color: #fff;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    #header {
+        background-image: url("https://www.sololearn.com/Uploads/header.jpg");
+        background-size: cover;
+    }
+    #header img {
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin: auto;
+        position: center;
+    }
+    #header p {
+        font-size: 25pt;
+        color: #3b464c;
+        padding-top: 5px;
+        margin: 0;
+        font-weight: bold;
+        text-align: center;
+    }
+    .quote {
+        font-size: 12pt;
+        text-align: right;
+        margin-top: 10px;
+    }
+    table {
+        width: 100%;
+        font-size: 11pt;
+    }
+    table, th, td {
+        border: 2px solid #cecece;
+        border-collapse: collapse;
+        text-align: center;
+        table-layout: fixed;
+    }
+    .selected {
+        background-color: #f36f48;
+        font-weight: bold;
+        color: white;
+    }
+    li {
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+    progress {
+        width: 70%;
+        height: 20px;
+        color: #3fb6b2;
+        background: #efefef;
+    }
+    progress::-webkit-progress-bar {
+        background: #efefef;
+    }
+    progress::-webkit-progress-value {
+        background: #3fb6b2;
+    }
+    progress::-moz-progress-bar {
+        color: #3fb6b2;
+        background: #efefef;
+    }
+    iframe, audio {
+        display: block;
+        margin: 0 auto;
+        border: 3px solid #3fb6b2;
+    }
+    hr {
+        border: 0;
+        height: 1px;
+        background: #f36f48;
+    }
+    form {
+        text-align: center;
+        margin-top: 0;
+    }
+    .submit {
+        background-color: #3fb6b2;
+        padding: 12px 45px;
+        border-radius: 5px;
+        cursor: pointer;
+        color: #ffffff;
+        border: none;
+        outline: none;
+        margin: 0;
+        font-weight: bold;
+    }
+    .submit:hover {
+        background-color: #43a09d;
+    }
+    textarea {
+        height: 100px;
+    }
+    input, textarea {
+        margin-bottom: 10px;
+        font-size: 11pt;
+        padding: 15px 10px 10px;
+        border: 1px solid #cecece;
+        background-color: #efefef;
+        color: #787575;
+        border-radius: 5px;
+        width: 70%;
+        outline: none;
+    }
+    .face {
+        transform: scale(0.4);
+        margin: 0 auto;
+        display: block;
+        margin-top: -35px;
+        margin-bottom: -25px;
+    }
+    #contacts img {
+        height: 50px;
+        width: 50px;
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+    #contacts a {
+        text-decoration: none;
+    }
+    #contacts img:hover {
+        opacity: 0.8;
+    }
+    #contacts {
+        text-align: center;
+    }
+    .copyright {
+        font-size: 8pt;
+        text-align: right;
+        padding-bottom: 10px;
+        color: grey;
+    }
+
+</style>
 <body class="{{ $class ?? '' }}">
 
 
@@ -59,12 +230,12 @@
                 <li class="header-title">Imagenes</li>
                 <li class="active">
                     <a class="img-holder switch-trigger" href="javascript:void(0)">
-                        <img src="{{ asset('material') }}/img/sidebar-1.jpg" alt="">
+                        <img src="{{ asset('material') }}/img/fondo.png" alt="">
                     </a>
                 </li>
                 <li>
                     <a class="img-holder switch-trigger" href="javascript:void(0)">
-                        <img src="{{ asset('material') }}/img/sidebar-2.jpg" alt="">
+                        <img src="{{ asset('material') }}/img/sidebar-1.jpg" alt="">
                     </a>
                 </li>
                 <li>
@@ -77,7 +248,6 @@
                         <img src="{{ asset('material') }}/img/sidebar-4.jpg" alt="">
                     </a>
                 </li>
-
                 <!-- <li class="header-title">Want more components?</li>
                     <li class="button-container">
                         <a href="https://www.creative-tim.com/product/material-dashboard-pro" target="_blank" class="btn btn-warning btn-block">
@@ -91,15 +261,18 @@
                     </a>
                 </li>
                 <li class="button-container github-star">
-                    <a class="github-button" href="https://github.com/creativetimofficial/material-dashboard-laravel" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+                    <a class="github-button" href="https://github.com/Da1ch1/integra" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
                 </li>
-                <li class="header-title">Thank you for 95 shares!</li>
-                <li class="button-container text-center">
-                    <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
-                    <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button>
-                    <br>
-                    <br>
-                </li>
+
+                <div class="section" id="contacts">
+                    <a href="#">
+                        <img alt="Facebook" src="https://www.sololearn.com/Uploads/icons/facebook.png"/>
+                    </a>
+                    <a href="#">
+                        <img alt="Twitter" src="https://www.sololearn.com/Uploads/icons/twitter.png" />
+                    </a>
+                </div>
+
             </ul>
         </div>
     </div>
@@ -152,52 +325,7 @@
 <!--Charts-->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-      <!--   <script>
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            datasets: [{
-                label: 'Datos de Sensor',
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 3
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-    let url = ''
-    fetch(url)
-        .then( response => response.json())
-        .then (datos => mostrar (datos))
-        .catch(error => console.log(error))
-    const mostrar = (sensores) =>{
-        sensores.forEach(element => {
-            myChart.data['labels'].push(element.lugar)
-            myChart.data['datasets'][0].data.push(element.Numser)
-        });
-    }
-</script> -->
+
 @stack('js')
 </body>
 </html>

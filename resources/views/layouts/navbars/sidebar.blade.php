@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="purple" data-background-color="white" data-image="{{ asset('material') }}/img/sidebar-1.jpg">
+<div class="sidebar" data-color="purple" data-background-color="white" data-image="{{ asset('material') }}/img/fondo.png">
     <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -43,6 +43,14 @@
                 </a>
             </li>
             <!--   -->
+            <!--Icono de graficas-->
+            <li class="nav-item{{ $activePage == 'graf' ? ' active' : '' }}">
+                <a class="nav-link" href="{{ route('sensors.Grafica') }}">
+                    <i class="material-icons">sort</i>
+                    <p>{{ __('graficas') }}</p>
+                </a>
+            </li>
+            <!--   -->
 
             <li class="nav-item{{ $activePage == 'typography' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('typography') }}">
@@ -57,12 +65,13 @@
                     <p>{{ __('Maps') }}</p>
                 </a>
             </li>
-            <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
+          <!--  <li class="nav-item{{ $activePage == 'notifications' ? ' active' : '' }}">
                 <a class="nav-link" href="{{ route('notifications') }}">
                     <i class="material-icons">notifications</i>
                     <p>{{ __('Notifications') }}</p>
                 </a>
-            </li>
+            </li> -->
+
             <li class="nav-item active-pro{{ $activePage == 'upgrade' ? ' active' : '' }}">
                 <a class="nav-link text-white bg-primary" href="{{ route('upgrade') }}">
                     <i class="material-icons text-white">unarchive</i>

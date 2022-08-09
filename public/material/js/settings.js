@@ -1,4 +1,6 @@
+
 $(document).ready(function() {
+
   $().ready(function() {
       $sidebar = $('.sidebar');
 
@@ -11,7 +13,7 @@ $(document).ready(function() {
       window_width = $(window).width();
 
       fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
-    
+
       /* if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
           if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
               $('.fixed-plugin .dropdown').addClass('open');
@@ -166,6 +168,7 @@ $(document).ready(function() {
 });
 
 $(document).ready(function() {
+
   md.checkFullPageBackgroundImage();
   setTimeout(function() {
       // after 1000 ms we add the class animated to the login/register card
