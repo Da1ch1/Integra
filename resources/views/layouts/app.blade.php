@@ -311,7 +311,6 @@
 <!-- Library for adding dinamically elements -->
 <script src="{{ asset('material') }}/js/plugins/arrive.min.js"></script>
 <!--  Google Maps Plugin    -->
-<script src="https://maps.googleapis.com/maps/api/js?AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"></script>
 <!-- Chartist JS -->
 <script src="{{ asset('material') }}/js/plugins/chartist.min.js"></script>
 <!--  Notifications Plugin    -->
@@ -325,7 +324,7 @@
 <!--Charts-->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-
+<!--https://maps.googleapis.com/maps/api/js?AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly -->
 @stack('js')
 </body>
 </html>

@@ -7,6 +7,7 @@ use App\Models\Sensor;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use LaravelDaily\LaravelCharts\Classes\LaravelChart;
 
 
 
@@ -109,9 +110,46 @@ class SensorController extends Controller
 
     public function chart()
     {
+        $chart_options = [
+            'chart_title' => 'Modelos',
+            'report_type' => 'group_by_string',
+            'model' => 'App\Models\Sensor',
+
+            'group_by_field' => 'Modelo',
+            'filter_field' => 'Numser',
+            'name' => 'lugar',
+            'chart_type' => 'pie',
+            'chart_color' => '76,45,130',
+        ];
+        $chart1 = new LaravelChart($chart_options);
+
+        $chart_options = [
+            'chart_title' => 'Lugares',
+            'report_type' => 'group_by_string',
+            'model' => 'App\Models\Sensor',
+
+            'group_by_field' => 'lugar',
+            'filter_field' => 'Numser',
+            'name' => 'lugar',
+            'chart_type' => 'bar',
+            'chart_color' => '76,45,130',
+        ];
+        $chart2 = new LaravelChart($chart_options);
+        $chart_options = [
+            'chart_title' => 'Numero de Sensor',
+            'report_type' => 'group_by_string',
+            'model' => 'App\Models\Sensor',
+
+            'group_by_field' => 'Modelo',
+            'filter_field' => 'Numser',
+            'name' => 'lugar',
+            'chart_type' => 'line',
+            'chart_color' => '76,45,130',
+        ];
+        $chart3 = new LaravelChart($chart_options);
 
 
-        return view('sensors.Grafica');
+        return view('sensors.Grafica',compact('chart1','chart2','chart3'));
 
     }
 
